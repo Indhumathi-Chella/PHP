@@ -256,7 +256,7 @@ unregister_tick_function('tickHandler');
 include("module.php");
 echo "welcome";
 ?>
-https://www.php.net/manual/en/language.oop5.php
+
 <?php
 $count = 1;
 echo "goto Example:\n";

@@ -96,4 +96,62 @@ $product2->name = "Smartphone";
 echo "Product 1: {$product1->name}, Price: {$product1->price}\n"; // Outputs: Laptop, Price: 1500
 echo "Product 2: {$product2->name}, Price: {$product2->price}\n"; // Outputs: Smartphone, Price: 1500
 
+// Comparing Objects ¶
+
+class Car {
+    public $make;
+    public $model;
+
+    public function __construct($make, $model) {
+        $this->make = $make;
+        $this->model = $model;
+    }
+}
+
+$car1 = new Car("Toyota", "Corolla");
+$car2 = new Car("Toyota", "Corolla");
+$car3 = $car1; // Reference to the same object
+
+// Compare two diff objects with same values
+echo ($car1 == $car2) ? "TRUE\n" : "FALSE\n"; // TRUE
+echo ($car1 === $car2) ? "TRUE\n" : "FALSE\n"; // FALSE
+
+// Compare reference to the same object
+echo ($car1 == $car3) ? "TRUE\n" : "FALSE\n"; // TRUE
+echo ($car1 === $car3) ? "TRUE\n" : "FALSE\n"; // TRUE
+
+// object and reference
+
+class MyClassobj {
+    public $value = 10;
+}
+
+$obj1 = new MyClassobj();
+$obj2 = $obj1; // Both point the same object
+
+$obj2->value = 20;
+
+echo $obj1->value; // Outputs: 20
+
+// Object Serialization
+class Person {
+    public $name;
+    public $age;
+
+    public function __construct($name, $age) {
+        $this->name = $name;
+        $this->age = $age;
+    }
+}
+
+$person = new Person("Indhu", 22);
+$serialized = serialize($person);
+
+echo $serialized; 
+echo ".\n";
+
+$unserialized = unserialize($serialized);
+echo $unserialized->name; // Outputs:Indhu
+echo ".\n";
+
 ?>

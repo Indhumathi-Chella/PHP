@@ -80,6 +80,7 @@ foreach ($values as $value) {
         echo "Falsy: ";
     }
     var_dump($value);
+    // echo $value;
 }
 
 ?>
