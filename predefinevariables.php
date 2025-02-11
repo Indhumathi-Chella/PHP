@@ -29,7 +29,7 @@ if (php_sapi_name() != 'cli') {
 } else {
     // CLI Simulation for POST data
     echo "This script is running in CLI mode.\n";
-    $_POST['email'] = 'indhu@gmail.com'; // Simulated POST value
+    $_POST['email'] = 'indhu@gmail.com';
     echo "Simulated email: " . $_POST['email'] . "\n";
 }
 

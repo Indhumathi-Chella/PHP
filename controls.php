@@ -13,7 +13,7 @@ if ($age >= 18) {
     echo "You are not eligible to vote.\n";
 }
 
-//  else-if statement
+//  elseif statement
 $score = 75;
 if ($score >= 90) {
     echo "Grade: A\n";
@@ -229,23 +229,7 @@ echo "Your BMI Category: $bmiCategory\n"; // Output: Your BMI Category: Underwei
 ?>
 
 <?php
-// 
-declare(ticks=1);
-// declare(strict_types=1);
-// declare(encoding='UTF-8'); // Ignored in PHP 5.4+
-
-// Tick handler
-function tickHandler() {
-    echo "Tick triggered!\n";
-}
-
-register_tick_function('tickHandler');
-
-// Strict typing function
-function multiply(int $a, int $b): int {
-    return $a * $b;
-}
-
+// git 
 // Test tick and strict typing
 echo multiply(3, 4) . "\n"; // Works
 // echo multiply(3.5, 2);      // Throws TypeError

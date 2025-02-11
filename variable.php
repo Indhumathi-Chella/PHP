@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Variables</title>
-</head>
-<body>
-    
 <h4>PHP Variables</h4>
 
 <?php
@@ -53,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Using $_SESSION for session handling
 session_start();
-$_SESSION['username'] = "JohnDoe";
+$_SESSION['username'] = "Indhu";
 echo $_SESSION['username'];
 
 // variable scope
@@ -95,7 +86,7 @@ function counter() {
 
 // Using Superglobals 
 function testSuperglobal() {
-    $_POST['name'] = 'John Doe';
+    $_POST['name'] = 'Indhu';
     echo "Superglobal POST Name: " . $_POST['name'] . "<br>";  
 }
 
@@ -157,6 +148,3 @@ $fruit->$propertyName = 'green';
 
 echo "The color of the fruit is now: " . $fruit->color . "<br>";  // Outputs: The color of the fruit is now: green
 ?>
-
-</body>
-</html>
